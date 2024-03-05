@@ -68,6 +68,7 @@ const theme = extendTheme({
               padding: "10px 30px 10px 30px",
               ":hover": {
                 background: "none",
+                color: "#fff",
               },
             }),
           ...(ownerState.color === "neutral" &&

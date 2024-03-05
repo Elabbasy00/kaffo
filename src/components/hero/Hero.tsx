@@ -48,8 +48,15 @@ const HeroDescription = styled(Typography)(({ theme }) => ({
 
 const TextWapper = styled(Box)(({ theme }) => ({
   zIndex: 3,
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-start",
   [theme.breakpoints.down("md")]: {
     textAlign: "center",
+    alignItems: "center",
   },
 }));
 
@@ -76,15 +83,6 @@ const Circle = styled(Box)(({ theme }) => ({
   //   top: "0vw",
   //   right: "4vw",
   //   // transform: "translate(-12%, -1%)",
-  // },
-  // [theme.breakpoints.down("md")]: {
-  //   width: "250px",
-  //   height: "250px",
-  //   top: "unset",
-  //   right: "unset",
-  //   transform: "unset",
-  //   marginBottom: 130,
-  //   marginLeft: 50,
   // },
 }));
 
