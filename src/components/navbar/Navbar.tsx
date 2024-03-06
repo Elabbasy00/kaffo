@@ -58,10 +58,10 @@ function Navbar() {
           alignItems: "center",
           flexGrow: { md: 1, xs: 1 },
         }}
-        component={Link}
-        href="/"
       >
-        <Logo src="/logo/Logo.svg" width={100} height={60} alt="Kaffo Logo" />
+        <Link href="/">
+          <Logo src="/logo/Logo.svg" width={100} height={60} alt="Kaffo Logo" />
+        </Link>
       </Box>
       <Box
         sx={{

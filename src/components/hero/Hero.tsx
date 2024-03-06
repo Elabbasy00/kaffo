@@ -1,9 +1,10 @@
 "use client";
-import { Box, Container, Sheet, Typography, styled } from "@mui/joy";
+import { Box, Button, Container, Sheet, Typography, styled } from "@mui/joy";
 import React from "react";
 import OutlineButton from "../outline-btn/OutlineButton";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { FaWhatsapp } from "react-icons/fa";
 
 gsap.registerPlugin(useGSAP);
 
@@ -67,23 +68,11 @@ const Circle = styled(Box)(({ theme }) => ({
   backgroundPosition: "top center !important",
   backgroundSize: "contain",
   zIndex: 1,
-  // transform: "translate(-10%, -1%)",
   display: "block",
   width: "350px",
   height: "350px",
-
-  // clipPath: "circle(50% at 50% 50%)",
   margin: "0 auto",
   borderRadius: "50%",
-
-  // marginleft: 280,
-  // [theme.breakpoints.down("lg")]: {
-  //   width: "300px",
-  //   height: "300px",
-  //   top: "0vw",
-  //   right: "4vw",
-  //   // transform: "translate(-12%, -1%)",
-  // },
 }));
 
 function Hero() {
@@ -121,14 +110,24 @@ function Hero() {
             <HeroText level="h1">هَــــلَا</HeroText>
             <HeroText level="h1">خـلـيـك كفوَّ</HeroText>
 
-            <HeroDescription level="title-lg">
+            <HeroDescription
+              level="title-lg"
+              fontWeight={700}
+              letterSpacing={1}
+              lineHeight={1.8}
+            >
               كفو، حيث يلتقي الإبداع بالتعلم بطريقة ملهمة! نحن نتخذ من التعليم،
               البرمجة، والتسويق فنًا، نقدم خدماتنا بروح إيجابية و متميزة لتسهيل
               رحلة النجاح لعملائنا.
             </HeroDescription>
-            <OutlineButton backgroundColor="var(--joy-palette-primary-solidBg)">
-              من نحن
-            </OutlineButton>
+            <a href="https://wa.me/+966552623843" target="_blank">
+              <OutlineButton
+                endDecorator={<FaWhatsapp style={{ fontSize: "1.6em" }} />}
+                backgroundColor="var(--joy-palette-primary-solidBg)"
+              >
+                تواصـل معانا
+              </OutlineButton>
+            </a>
           </TextWapper>
           <Box
             sx={{
@@ -138,11 +137,6 @@ function Hero() {
               width: "100%",
               height: { xs: "100%", md: "90vh" },
               position: "relative",
-              // background: "url(./hero.svg)",
-              // backgroundRepeat: "no-repeat",
-              // backgroundPosition: "bottom",
-              // backgroundSize: "contain",
-              // zIndex: 1000,
             }}
           >
             <Box

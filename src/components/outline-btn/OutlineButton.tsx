@@ -11,6 +11,7 @@ import { Box, Button } from "@mui/joy";
 interface Props {
   children: React.ReactNode;
   backgroundColor: string;
+  [key: string]: any;
 }
 export default function OutlineButton({
   children,

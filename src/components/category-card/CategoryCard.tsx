@@ -51,9 +51,10 @@ export default function CategoryCard({
           {item.name}
         </Typography>
         <Typography
-          level="body-sm"
+          level="body-md"
           sx={{
             color: "text.secondary",
+            fontWeight: "600",
           }}
         >
           {item.description?.slice(0, 250)}..

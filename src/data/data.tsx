@@ -1,4 +1,4 @@
-export const services = [
+export const categoryes = [
   {
     name: "الـتـسـويـقـيـة",
     description:
@@ -20,6 +20,37 @@ export const services = [
     image: "/service/coding.png",
     effect: 3,
   },
+];
+
+export const services = [
+  {
+    name: "تصميم وبرمجة مواقع الويب",
+    image: "/service/Programmer.png",
+    id: 1,
+  },
+  { name: "برمجة تطبيقات الجوال", image: "/service/Cross-platform.png", id: 2 },
+  { name: "حلول برمجية مخصصة", image: "/service/coding.png", id: 3 },
+  { name: "دعم تقني", image: "/service/educ.png", id: 4 },
+  { name: "تحسين وتطوير البرمجيات الحالية", image: "/service/educ.png", id: 5 },
+
+  { name: "حملات إعلانية", image: "/service/educ.png", id: 6 },
+  { name: "صياغة وتحرير المحتوى", image: "/service/market.png", id: 7 },
+  { name: "عمل هوية تجارية", image: "/service/Programmer.png", id: 8 },
+  { name: "هوية بصرية", image: "/service/educ.png", id: 9 },
+  { name: "تسويق رقمي", image: "/service/Cross-platform.png", id: 10 },
+
+  {
+    name: "دورات تدريبية برمجية وتسويقية",
+    image: "/service/market.png",
+    id: 8,
+  },
+  {
+    name: "كورسات دراسية للمدارس والجامعات",
+    image: "/service/educ.png",
+    id: 9,
+  },
+  { name: "مشاريع التخرج والأبحاث", image: "/service/Programmer.png", id: 10 },
+  { name: "ورش عمل تعليمية", image: "/service/Cross-platform.png", id: 11 },
 ];
 
 export const client = [

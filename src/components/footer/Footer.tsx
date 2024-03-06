@@ -54,12 +54,8 @@ function Footer() {
               />
             </Link>
             <Typography level="body-md" textColor="neutral.400" mt={2}>
-              في عالم يدعو إلى التقنية والتطوير، تتألق شركة كفو بتقديم خدمات
-              تسويقية متقدمة، حيث نعكس رؤيتك بأسلوب إبداعي وفعّال. تتميز خدماتنا
-              البرمجية بالتخصيص والتطور، حيث نقدم حلولًا تقنية مبتكرة لتلبية
-              احتياجات عملك. وفي عالم التعليم، نمنحك فرصة التعلم بروح ملهمة
-              وبرامج مخصصة تطويرية. إن كفو تجمع بين التسويق، البرمجة، والتعليم
-              لتقديم تجارب فريدة ودعم شامل لرحلة نجاحك.
+              تأسست كـفـوّ على رؤية تعليمية فريدة، واستراتيجيات تسويقية متطورة،
+              وتقنيات برمجية مبتكرة، لنمنحكم رحلة متكاملة نحو التميز
             </Typography>
           </Grid>
           <Grid lg={3} md={6} xs={12}>
@@ -110,7 +106,9 @@ function Footer() {
                 </FooterInfo>
                 <FooterInfo>
                   <MdPhone />
-                  <Typography level="h4">+201062347769</Typography>
+                  <Typography level="h4" sx={{ direction: "rtl" }}>
+                    +966 55 262 3843
+                  </Typography>
                 </FooterInfo>
                 <FooterInfo>
                   <MdLocationPin />
@@ -140,7 +138,7 @@ function Footer() {
             >
               <Magnetic>
                 <BottomIcon sx={{ fontSize: "1.2rem" }}>
-                  <a href="https://www.facebook.com/Kaffo.co/">
+                  <a href="https://www.facebook.com/Kaffo.co/" target="_blank">
                     <MdFacebook />
                   </a>
                 </BottomIcon>
