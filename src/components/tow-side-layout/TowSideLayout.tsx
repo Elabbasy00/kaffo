@@ -22,7 +22,8 @@ function TowSideLayout({ img, reversed, withEffect = false, children }: Props) {
         display: "flex",
         flexDirection: reversed ? "column-reverse" : "column",
         alignItems: "center",
-        py: 10,
+        pt: 6,
+        pb: 2,
         gap: 4,
         [theme.breakpoints.up(834)]: {
           flexDirection: "row",
@@ -84,8 +85,10 @@ function TowSideLayout({ img, reversed, withEffect = false, children }: Props) {
         <Image
           src={img}
           alt="Programming"
-          width={100}
-          height={100}
+          // width={100}
+          // height={100}
+          quality={100}
+          fill
           style={{
             width: "100%",
             height: "100%",

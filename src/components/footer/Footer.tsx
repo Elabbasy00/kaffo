@@ -14,7 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { MdEmail, MdPhone, MdLocationPin, MdFacebook } from "react-icons/md";
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 
 import Magnetic from "../magnetic/Magnetic";
@@ -22,7 +22,11 @@ import Magnetic from "../magnetic/Magnetic";
 const BottomIcon = styled(ListItem)(({ theme }) => ({
   fontSize: "1.2rem",
   transition: "all 0.3s linear",
-  ":hover": { color: theme.palette.neutral.solidBg },
+  ":hover": { color: theme.palette.primary.solidBg },
+  border: "0.1px dashed",
+
+  borderRadius: "50%",
+  margin: "0 5px",
 }));
 
 const FooterInfo = styled(ListItem)(({ theme }) => ({
@@ -136,35 +140,39 @@ function Footer() {
                 fontSize: "2rem",
               }}
             >
-              <Magnetic>
-                <BottomIcon sx={{ fontSize: "1.2rem" }}>
-                  <a href="https://www.facebook.com/Kaffo.co/" target="_blank">
+              <a
+                href="https://www.facebook.com/Kaffo.co/"
+                target="_blank"
+                style={{ display: "block" }}
+              >
+                <Magnetic>
+                  <BottomIcon sx={{ fontSize: "1.2rem" }}>
                     <MdFacebook />
-                  </a>
-                </BottomIcon>
-              </Magnetic>
-              <Magnetic>
-                <BottomIcon>
-                  <a href="mailto:kaffo2024@gmail.com">
+                  </BottomIcon>
+                </Magnetic>
+              </a>
+              <a href="mailto:kaffo2024@gmail.com">
+                <Magnetic>
+                  <BottomIcon>
                     <MdEmail />
-                  </a>
-                </BottomIcon>
-              </Magnetic>
+                  </BottomIcon>
+                </Magnetic>
+              </a>
 
-              <Magnetic>
-                <BottomIcon>
-                  <a href="https://www.instagram.com/kaffo.co" target="_blank">
+              <a href="https://www.instagram.com/kaffo.co" target="_blank">
+                <Magnetic>
+                  <BottomIcon>
                     <FaInstagram />
-                  </a>
-                </BottomIcon>
-              </Magnetic>
-              <Magnetic>
-                <BottomIcon>
-                  <a href="https://twitter.com/kaffo_co" target="_blank">
+                  </BottomIcon>
+                </Magnetic>
+              </a>
+              <a href="https://twitter.com/kaffo_co" target="_blank">
+                <Magnetic>
+                  <BottomIcon>
                     <BsTwitterX />
-                  </a>
-                </BottomIcon>
-              </Magnetic>
+                  </BottomIcon>
+                </Magnetic>
+              </a>
             </List>
           </Grid>
         </Grid>

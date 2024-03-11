@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import SwiperComponent from "../swiper/SwiperComponent";
 import { SwiperSlide } from "swiper/react";
 import { client } from "@/src/data/data";
 import ClientsCard from "../clients-card/ClientsCard";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 function ClientSlider() {
   return (
@@ -25,20 +26,20 @@ function ClientSlider() {
           spaceBetween: 50,
         },
       }}
-      effect="coverflow"
+      // effect="coverflow"
       loop={true}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
-      modules={[Autoplay, EffectCoverflow]}
-      coverflowEffect={{
-        rotate: 20,
-        stretch: 0,
-        depth: 350,
-        modifier: 1,
-        slideShadows: false,
-      }}
+      modules={[Autoplay]}
+      // coverflowEffect={{
+      //   rotate: 20,
+      //   stretch: 0,
+      //   depth: 350,
+      //   modifier: 1,
+      //   slideShadows: false,
+      // }}
       slidesPerView={4}
       spaceBetween={20}
     >

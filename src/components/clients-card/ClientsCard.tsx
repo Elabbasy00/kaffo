@@ -14,7 +14,13 @@ function ClientsCard({ item }: { item: { image: string; name: string } }) {
     >
       <Avatar
         src={item.image}
-        sx={{ width: "100px", height: "100px", objectFit: "contain" }}
+        sx={{
+          width: "100px",
+          height: "100px",
+          objectFit: "cover",
+          textAlign: "center",
+          background: "transparent",
+        }}
       />
       <Typography textColor="neutral.solidBg" fontWeight="700">
         {item.name}

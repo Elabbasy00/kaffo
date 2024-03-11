@@ -1,19 +1,72 @@
-import { Box, Divider, SvgIcon, Typography } from "@mui/joy";
+import { Box, Divider, Typography } from "@mui/joy";
 import React from "react";
 import TextSlideAnimation from "../text-slide-animation/TextSlideAnimation";
+import Image from "next/image";
 
 function SectionTitles({ text }: { text: string }) {
   return (
-    <Box sx={{ position: "relative", my: 5 }}>
-      <Divider>
-        <Typography
-          level="h1"
-          fontWeight="900"
-          sx={{ color: "primary.solidBg" }}
-        >
-          <TextSlideAnimation text={text} />
-        </Typography>
-      </Divider>
+    <Box
+      sx={{
+        position: "relative",
+        my: 5,
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      {/* <Divider> */}
+      <Box
+        sx={{
+          display: { md: "flex", xs: "none" },
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <Image
+          width={100}
+          height={2}
+          src="/divider-right.png"
+          alt="divider"
+          loading="lazy"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </Box>
+      <Typography
+        level="h1"
+        fontWeight="900"
+        sx={{
+          width: "100%",
+          color: "primary.solidBg",
+          fontSize: { xs: "8vw", md: "4vw" },
+        }}
+      >
+        <TextSlideAnimation text={text} />
+      </Typography>
+      <Box
+        sx={{
+          display: { md: "flex", xs: "none" },
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <Image
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          width={100}
+          height={100}
+          loading="lazy"
+          src="/divider-left.png"
+          alt="divider"
+        />
+      </Box>
+      {/* </Divider> */}
     </Box>
   );
 }

@@ -20,20 +20,30 @@ const theme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
+        focusVisible: "#FBBC60",
         text: {
           tertiary: "#D3D3D3",
           secondary: "#AEA5A5",
         },
         background: {},
         primary: {
+          "500": "#FBBC60",
           solidBg: "#FAAF40",
           solidHoverBg: "#FBBC60",
           solidColor: "#ffffff",
           solidActiveBg: "#FCCA80",
 
+          softBg: "#FCCA80",
+          softActiveBg: "#FDD7A0",
+          softHoverBg: "#FDE4BF",
+          softColor: "#0E6B81",
+          softActiveColor: "#0E6B81",
+
           outlinedBorder: "#FAAF40",
           outlinedColor: "#FAAF40",
           outlinedHoverColor: "#fff",
+          outlinedHoverBg: "#FAAF40",
+          outlinedActiveBg: "#FCCA80",
         },
         neutral: {
           solidBg: "#0E6B81",
@@ -85,6 +95,13 @@ const theme = extendTheme({
         }),
       },
     },
+    // JoyInput: {
+    //   styleOverrides: {
+    //     root: ({ ownerState }) => ({
+    //       borderRadius: "20px",
+    //     }),
+    //   },
+    // },
   },
 });
 

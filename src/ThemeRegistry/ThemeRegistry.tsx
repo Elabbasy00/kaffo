@@ -6,6 +6,7 @@ import NextAppDirEmotionCacheProvider from "./EmotionCache";
 import theme from "./theme";
 import { prefixer } from "stylis";
 import rtlPlugin from "stylis-plugin-rtl";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 export default function ThemeRegistry({
   children,
@@ -22,8 +23,16 @@ export default function ThemeRegistry({
         disableTransitionOnChange
       >
         <CssBaseline />
+        <ReactLenis
+          root
+          options={{
+            duration: 1.2,
 
-        {children}
+            // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          }}
+        >
+          {children}
+        </ReactLenis>
       </CssVarsProvider>
     </NextAppDirEmotionCacheProvider>
   );

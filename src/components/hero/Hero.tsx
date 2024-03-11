@@ -29,7 +29,7 @@ const HeroText = styled(Typography)(({ theme }) => ({
     fontSize: "3em",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "3em",
+    fontSize: "2em",
   },
 }));
 
@@ -43,7 +43,7 @@ const HeroDescription = styled(Typography)(({ theme }) => ({
     width: "100%",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "16px",
+    fontSize: "14px",
   },
 }));
 
@@ -73,6 +73,13 @@ const Circle = styled(Box)(({ theme }) => ({
   height: "350px",
   margin: "0 auto",
   borderRadius: "50%",
+  [theme.breakpoints.down("md")]: {
+    right: "50%",
+    // top: "80%",
+    transform: "translate(50%, 0%)",
+    width: "257px",
+    height: "257px",
+  },
 }));
 
 function Hero() {

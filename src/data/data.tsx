@@ -42,18 +42,22 @@ export const services = [
   {
     name: "دورات تدريبية برمجية وتسويقية",
     image: "/service/market.png",
-    id: 8,
+    id: 11,
   },
   {
     name: "كورسات دراسية للمدارس والجامعات",
     image: "/service/educ.png",
-    id: 9,
+    id: 12,
   },
-  { name: "مشاريع التخرج والأبحاث", image: "/service/Programmer.png", id: 10 },
-  { name: "ورش عمل تعليمية", image: "/service/Cross-platform.png", id: 11 },
+  { name: "مشاريع التخرج والأبحاث", image: "/service/Programmer.png", id: 13 },
+  { name: "ورش عمل تعليمية", image: "/service/Cross-platform.png", id: 14 },
 ];
 
 export const client = [
+  {
+    name: "معهد طيبة",
+    image: "/clients/Tiba.png",
+  },
   {
     name: "جامعة الملك عبدالعزيز",
     image: "/clients/king_abd_elazez.png",
@@ -77,5 +81,101 @@ export const client = [
   {
     name: "جامعة الاميرة نورة",
     image: "/clients/queen_nora.png",
+  },
+];
+
+export const blogs = [
+  {
+    name: "كيفية تدير مبيعاتك بشكل احترافي",
+    timestamp: "",
+    content: "",
+    image: "/blog/sales.png",
+    id: 1,
+  },
+  {
+    name: "الاهداف التسويقة",
+    timestamp: "",
+    content: "",
+    image: "/blog/goals.jpg",
+    id: 2,
+  },
+  {
+    name: "كيف تصمم هوية بصرية",
+    timestamp: "",
+    content: "",
+    image: "/blog/desgin.webp",
+    id: 3,
+  },
+  {
+    name: "ما هو Flutter",
+    timestamp: "",
+    content: "",
+    image: "/blog/flutter-1.png",
+    id: 4,
+  },
+];
+
+export const team = [
+  {
+    name: "د. مـحمـد جـمـال ",
+    desc: "بكالوريوس الطب والجراحة العامة  - ماجستير الباطنة العامة والجهاز الهضمي",
+    img: "/our-team/dr-mohamed.jpg",
+    id: 1,
+  },
+  {
+    name: "د. مـحـمـد ايـمـن",
+    desc: "بكالريوس الطب و الجراحة",
+    img: "/our-team/dr-ayman.jpg",
+    id: 2,
+  },
+  {
+    name: "د. احـمـد شـلـبـي",
+    desc: "ماجستير الفيزياء و الالكترونيات",
+    img: "/our-team/shalaby.jpg",
+    id: 3,
+  },
+  {
+    name: "د. مـحـمـود عـادل",
+    desc: "دكتوراه الكيمياء العضوية",
+    img: "/our-team/m-adel.jpg",
+    id: 4,
+  },
+  {
+    name: "د. اخـلاص شـلـبـي",
+    desc: "ماجستير الكيمياء الغير عضوية",
+    img: "/our-team/a5las.jpg",
+    id: 5,
+  },
+  {
+    name: "اسـلام مـحـمـد",
+    desc: "ماجستير العلوم الزراعية",
+    img: "/our-team/islam.jpg",
+    id: 1,
+  },
+  {
+    name: "أ.م.د مـحـمـد بـحـيـري",
+    desc: "دكتوراه الذكاء الاصطناعي",
+    img: "/our-team/mohamed-bheriy.jpg",
+    id: 1,
+  },
+
+  {
+    name: "د. عـبـد الـسـلام مـحـمـد",
+    desc: "ماجستير فيزياء الجوامد",
+    img: "/our-team/blank.jpg",
+    id: 1,
+  },
+
+  {
+    name: "د. نـصـيـف مـجـدي",
+    desc: "ماجستير ميكانيكا حيوية",
+    img: "/our-team/nasif.jpg",
+    id: 1,
+  },
+  {
+    name: "لؤي حـسـام عـبـدالحـمـيـد",
+    desc: " بكالريوس الطب و الجراحه - الحالات الحرجة والرعاية المركزة",
+    img: "/our-team/loay.jpg",
+    id: 1,
   },
 ];

@@ -6,7 +6,7 @@ import OutlineButton from "../outline-btn/OutlineButton";
 
 function HomeAbout() {
   return (
-    <TowSideLayout img="/home.png" reversed={true} withEffect={true}>
+    <TowSideLayout img="/home.jpg" reversed={true} withEffect={true}>
       <Typography
         level="h1"
         fontWeight="xl"

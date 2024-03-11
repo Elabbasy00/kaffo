@@ -9,7 +9,7 @@ import "swiper/css";
 
 interface Props {
   spaceBetween: number;
-  slidesPerView: number;
+  slidesPerView: number | "auto";
   children: React.ReactNode;
   [key: string]: any;
 }

@@ -1,14 +1,17 @@
-"use client";
 import styles from "./page.module.css";
 import Hero from "../components/hero/Hero";
 
 import HomeAbout from "../components/home-about/HomeAbout";
 import { Container, Grid } from "@mui/joy";
-import { categoryes } from "../data/data";
+import { blogs, categoryes } from "../data/data";
 import CategoryCard from "../components/category-card/CategoryCard";
 import SectionTitles from "../components/section-titles/SectionTitles";
 import ClientSlider from "../components/client-slider/ClientSlider";
 import ServiceSlider from "../components/service-slider/ServiceSlider";
+import BlogCard from "../components/blog-card/BlogCard";
+import BoardCard from "../components/board-card/BoardCard";
+import TeamSlider from "../components/team-slider/TeamSlider";
+import ContactUs from "../components/contact-us/ContactUs";
 
 export default function Home() {
   return (
@@ -16,19 +19,39 @@ export default function Home() {
       <Hero />
       <Container>
         <HomeAbout />
-        <SectionTitles text="خــدمــاتــنــا" />
+      </Container>
+
+      <SectionTitles text="خــدمــاتــنــا" />
+      <Container>
         <Grid container spacing={2}>
           {categoryes.map((item, id) => (
-            <Grid key={id} xs={12} md={4}>
+            <Grid key={id} xs={12} sm={6} md={4}>
               <CategoryCard item={item} />
             </Grid>
           ))}
         </Grid>
+        <ServiceSlider />
       </Container>
-      <ServiceSlider />
       <SectionTitles text="شـركـاء الـنـجـاح" />
-      <ClientSlider />
-      {/* <SectionTitles text="الـمـدونـة" /> */}
+      <Container>
+        <ClientSlider />
+      </Container>
+
+      <SectionTitles text="الـمـدونـة" />
+      <Container>
+        <Grid container spacing={2}>
+          {blogs.map((item, id) => (
+            <Grid key={id} xs={12} sm={6} md={3}>
+              <BlogCard item={item} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+      <SectionTitles text="فريق العمل" />
+      <Container>
+        <TeamSlider />
+        <ContactUs />
+      </Container>
     </main>
   );
 }
