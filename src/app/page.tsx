@@ -32,10 +32,10 @@ export default function Home() {
         </Grid>
         <ServiceSlider />
       </Container>
-      <SectionTitles text="شـركـاء الـنـجـاح" />
+      {/* <SectionTitles text="شـركـاء الـنـجـاح" />
       <Container>
         <ClientSlider />
-      </Container>
+      </Container> */}
 
       <SectionTitles text="الـمـدونـة" />
       <Container>
