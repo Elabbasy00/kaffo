@@ -18,6 +18,7 @@ import React from "react";
 import { IoPhonePortrait, IoLogoWhatsapp } from "react-icons/io5";
 // import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
+import OutlineButton from "../outline-btn/OutlineButton";
 
 const InfoWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -161,6 +162,14 @@ function ContactUs() {
               </Option>
             ))}
           </Select>
+          <Box sx={{ my: 2 }}>
+            <OutlineButton
+              backgroundColor="var(--joy-palette-primary-solidBg)"
+              color="primary"
+            >
+              ارسـال طـلـبـك
+            </OutlineButton>
+          </Box>
         </Grid>
       </Grid>
     </Box>

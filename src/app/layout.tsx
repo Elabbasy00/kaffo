@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "../components/navbar/Navbar";
 import ThemeRegistry from "../ThemeRegistry/ThemeRegistry";
 import Footer from "../components/footer/Footer";
+import SessionWrapper from "./SessionWrapper";
 
 const cairo = Cairo({ subsets: ["arabic"] });
 
@@ -21,11 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body className={cairo.className}>
-        <ThemeRegistry>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeRegistry>
+        <SessionWrapper>
+          <ThemeRegistry>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeRegistry>
+        </SessionWrapper>
       </body>
     </html>
   );

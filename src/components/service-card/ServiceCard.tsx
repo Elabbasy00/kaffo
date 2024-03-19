@@ -11,6 +11,7 @@ function ServiceCard({ item }: { item: { name: string; image: string } }) {
       sx={{
         minHeight: "200px",
         position: "relative",
+        overflow: "hidden",
         ":hover": {
           ".service-card-text": {
             h4: {

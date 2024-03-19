@@ -7,6 +7,7 @@ import { EffectCoverflow } from "swiper/modules";
 import { Box, Button, Container } from "@mui/joy";
 import BoardCard from "../board-card/BoardCard";
 import OutlineButton from "../outline-btn/OutlineButton";
+import Link from "next/link";
 
 function TeamSlider() {
   return (
@@ -57,12 +58,14 @@ function TeamSlider() {
         ))}
       </SwiperComponent>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <OutlineButton
-          color="neutral"
-          backgroundColor="var(--joy-palette-primary-softColor)"
-        >
-          View More
-        </OutlineButton>
+        <Link href="about">
+          <OutlineButton
+            color="neutral"
+            backgroundColor="var(--joy-palette-primary-softColor)"
+          >
+            عرض المزيد
+          </OutlineButton>
+        </Link>
       </Box>
     </>
   );

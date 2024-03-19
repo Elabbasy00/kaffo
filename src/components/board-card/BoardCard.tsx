@@ -17,7 +17,7 @@ export default function BoardCard({
   return (
     <Card
       sx={{
-        width: 320,
+        width: "100%",
         maxWidth: "100%",
         position: "relative",
         boxShadow: "lg",

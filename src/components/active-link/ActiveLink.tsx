@@ -6,14 +6,15 @@ const ActiveLink = ({ href, name }: { href: string; name: string }) => {
   const pathname = usePathname();
   const isActive = pathname === href;
   return (
-    <Link href={href}>
+    <Link href={href} replace={true}>
       <Typography
         level="title-md"
         borderRadius="sm"
         sx={{
           position: "relative",
-          color: "#fff",
+          color: isActive ? "neutral.solidBg" : "#fff",
           fontWeight: "bold",
+
           fontSize: "lg",
           ":hover": {
             ":after": {
@@ -25,13 +26,13 @@ const ActiveLink = ({ href, name }: { href: string; name: string }) => {
           ":after": {
             content: "''",
             width: isActive ? "100%" : "0",
-            height: "2px",
+            height: "1.5px",
             display: "block",
-            backgroundColor: "#0E6B81",
-
+            background: "linear-gradient(180deg,  #0E6B81, #FAAF40)",
             transition: "all 0.3s linear",
             position: "absolute",
-            bottom: "-3px",
+            bottom: "-4px",
+
             left: 0,
             right: "unset",
           },

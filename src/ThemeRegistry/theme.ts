@@ -51,7 +51,16 @@ const theme = extendTheme({
           solidActiveBg: "#5E9CAB",
 
           outlinedColor: "#0E6B81",
-          outlinedHoverColor: "#ffffff",
+          // outlinedHoverColor: "#ffffff",
+
+          softBg: "#368496",
+          softActiveBg: "#5E9CAB",
+          softHoverBg: "#87B5C0",
+          softColor: "#ffffff",
+
+          // plainBg: "transparent",
+          // plainActiveBg: "transparent",
+          // plainHoverBg: "transparent",
         },
       },
     },
@@ -90,6 +99,7 @@ const theme = extendTheme({
               padding: "10px 30px 10px 30px",
               ":hover": {
                 background: "none",
+                color: "#fff",
               },
             }),
         }),

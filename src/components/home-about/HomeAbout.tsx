@@ -3,6 +3,7 @@ import React from "react";
 import TextSlideAnimation from "../text-slide-animation/TextSlideAnimation";
 import TowSideLayout from "../tow-side-layout/TowSideLayout";
 import OutlineButton from "../outline-btn/OutlineButton";
+import Link from "next/link";
 
 function HomeAbout() {
   return (
@@ -25,12 +26,14 @@ function HomeAbout() {
       >
         <TextSlideAnimation text="في عالم يدعو إلى التقنية والتطوير، تتألق شركة كفو بتقديم خدمات تسويقية متقدمة، حيث نعكس رؤيتك بأسلوب إبداعي وفعّال. تتميز خدماتنا البرمجية بالتخصيص والتطور، حيث نقدم حلولًا تقنية مبتكرة لتلبية احتياجات عملك. وفي عالم التعليم، نمنحك فرصة التعلم بروح ملهمة وبرامج مخصصة تطويرية. إن كفو تجمع بين التسويق، البرمجة، والتعليم لتقديم تجارب فريدة ودعم شامل لرحلة نجاحك." />
       </Typography>
-      <OutlineButton
-        color="neutral"
-        backgroundColor="var(--joy-palette-neutral-solidBg)"
-      >
-        قـصـتـنـا
-      </OutlineButton>
+      <Link href="/about">
+        <OutlineButton
+          color="neutral"
+          backgroundColor="var(--joy-palette-neutral-solidBg)"
+        >
+          قـصـتـنـا
+        </OutlineButton>
+      </Link>
     </TowSideLayout>
   );
 }

@@ -9,7 +9,7 @@ import OutlineButton from "../outline-btn/OutlineButton";
 export default function CategoryCard({
   item,
 }: {
-  item: { name: string; description: string; image: string };
+  item: { name: string; description: string; image: string; ref: string };
 }) {
   return (
     <Card
@@ -26,7 +26,12 @@ export default function CategoryCard({
       color="primary"
       variant="plain"
     >
-      <AspectRatio minHeight="300px" maxHeight="200px">
+      <AspectRatio
+        minHeight="300px"
+        maxHeight="200px"
+        color="primary"
+        variant="plain"
+      >
         <Image
           style={{
             objectFit: "contain",
@@ -67,9 +72,11 @@ export default function CategoryCard({
           margin: "0 auto",
         }}
       >
-        <OutlineButton backgroundColor="var(--joy-palette-primary-solidBg)">
-          الـمـزيـد
-        </OutlineButton>
+        <Link href={`/services/${item.ref}`}>
+          <OutlineButton backgroundColor="var(--joy-palette-primary-solidBg)">
+            الـمـزيـد
+          </OutlineButton>
+        </Link>
       </CardActions>
     </Card>
   );

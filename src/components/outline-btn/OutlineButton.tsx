@@ -59,7 +59,7 @@ export default function OutlineButton({
       <Button
         variant="outlined"
         // className={styles.roundedButton}
-        style={{
+        sx={{
           overflow: "hidden",
           borderColor: backgroundColor,
         }}

@@ -1,5 +1,6 @@
 export const categoryes = [
   {
+    ref: "market",
     name: "الـتـسـويـقـيـة",
     description:
       "مفتاح نجاح عملك! نقدم استراتيجيات تسويقية متقدمة، من تحليل السوق إلى إدارة الحملات الإعلانية. نسعى لتعزيز هويتك الرقمية وجذب جمهور مستهدف، مما يؤدي إلى زيادة الانتشار وتحقيق نتائج قوية. اعتمد على خبرتنا لرفع مستوى وجودك في السوق وتحقيق نمو مستدام لعملك.",
@@ -7,6 +8,7 @@ export const categoryes = [
     effect: 1,
   },
   {
+    ref: "learn",
     name: "الـتـعـلـيـمـيـة",
     description:
       "تقوم على بناء مستقبلك التعليمي والمهني. نقدم دورات متخصصة تشمل مجموعة واسعة من المواضيع، مصممة لتناسب احتياجاتك وتطوير مهاراتك. كما ان خدماتنا التعليمية المدرسية والجامعية تعكس التزامنا بتطوير مسار التعلم الخاص بك. نقدم دعماً شاملاً يشمل دروسًا تعليمية مخصصة، وموارد تعلم متقدمة لتعزيز فهمك. سواء كنت في المدرسة الثانوية أو الجامعة، نسعى لتوفير بيئة تعلم داعمة تساعدك على تحقيق أفضل أداء ممكن والنجاح في رحلتك الأكاديمية.",
@@ -14,6 +16,7 @@ export const categoryes = [
     effect: 2,
   },
   {
+    ref: "coding",
     name: "الـبـرمـجـيـة",
     description:
       "نوفر خدمات برمجية متقدمة يتضمن تحليل متقدم لاحتياجاتك، تصميم برمجي دقيق، وتنفيذ يعتمد على أحدث التقنيات. نقدم حلاً متكاملًا لاحتياجاتك البرمجية، سواء كنت تبحث عن تطوير تطبيقات مخصصة، أو تحسين مواقع الويب، أو حتى تنفيذ مشاريع برمجية معقدة. يتميز فريقنا بالخبرة العميقة والمهارات الفنية، حيث يسعى لتحقيق الأهداف الفريدة لعملك. سواء كنت شركة ناشئة تحتاج إلى تقنيات حديثة أو شركة كبيرة تسعى لتحسين أدائها البرمجي، نحن هنا لتقديم حلاً برمجيًا مبتكرًا يتجاوب مع احتياجاتك ويرفع مستوى وجودك الرقمي.",
@@ -27,30 +30,73 @@ export const services = [
     name: "تصميم وبرمجة مواقع الويب",
     image: "/service/Programmer.png",
     id: 1,
+    ref: "coding",
   },
-  { name: "برمجة تطبيقات الجوال", image: "/service/Cross-platform.png", id: 2 },
-  { name: "حلول برمجية مخصصة", image: "/service/coding.png", id: 3 },
-  { name: "دعم تقني", image: "/service/educ.png", id: 4 },
-  { name: "تحسين وتطوير البرمجيات الحالية", image: "/service/educ.png", id: 5 },
+  {
+    name: "برمجة تطبيقات الجوال",
+    image: "/service/Cross-platform.png",
+    id: 2,
+    ref: "coding",
+  },
+  {
+    name: "حلول برمجية مخصصة",
+    image: "/service/coding.png",
+    id: 3,
+    ref: "coding",
+  },
+  { name: "دعم تقني", image: "/service/educ.png", id: 4, ref: "coding" },
+  {
+    name: "تحسين وتطوير البرمجيات الحالية",
+    image: "/service/educ.png",
+    id: 5,
+    ref: "coding",
+  },
 
-  { name: "حملات إعلانية", image: "/service/educ.png", id: 6 },
-  { name: "صياغة وتحرير المحتوى", image: "/service/market.png", id: 7 },
-  { name: "عمل هوية تجارية", image: "/service/Programmer.png", id: 8 },
-  { name: "هوية بصرية", image: "/service/educ.png", id: 9 },
-  { name: "تسويق رقمي", image: "/service/Cross-platform.png", id: 10 },
+  { name: "حملات إعلانية", image: "/service/educ.png", id: 6, ref: "market" },
+  {
+    name: "صياغة وتحرير المحتوى",
+    image: "/service/market.png",
+    id: 7,
+    ref: "market",
+  },
+  {
+    name: "عمل هوية تجارية",
+    image: "/service/Programmer.png",
+    id: 8,
+    ref: "market",
+  },
+  { name: "هوية بصرية", image: "/service/educ.png", id: 9, ref: "market" },
+  {
+    name: "تسويق رقمي",
+    image: "/service/Cross-platform.png",
+    id: 10,
+    ref: "market",
+  },
 
   {
     name: "دورات تدريبية برمجية وتسويقية",
     image: "/service/market.png",
     id: 11,
+    ref: "learn",
   },
   {
     name: "كورسات دراسية للمدارس والجامعات",
     image: "/service/educ.png",
     id: 12,
+    ref: "learn",
   },
-  { name: "مشاريع التخرج والأبحاث", image: "/service/Programmer.png", id: 13 },
-  { name: "ورش عمل تعليمية", image: "/service/Cross-platform.png", id: 14 },
+  {
+    name: "مشاريع التخرج والأبحاث",
+    image: "/service/Programmer.png",
+    id: 13,
+    ref: "learn",
+  },
+  {
+    name: "ورش عمل تعليمية",
+    image: "/service/Cross-platform.png",
+    id: 14,
+    ref: "learn",
+  },
 ];
 
 export const client = [
