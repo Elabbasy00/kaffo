@@ -4,14 +4,14 @@ import SwiperComponent from "../swiper/SwiperComponent";
 import { SwiperSlide } from "swiper/react";
 import { team } from "@/src/data/data";
 import { EffectCoverflow } from "swiper/modules";
-import { Box, Button, Container } from "@mui/joy";
+import { Box, Container } from "@mui/joy";
 import BoardCard from "../board-card/BoardCard";
 import OutlineButton from "../outline-btn/OutlineButton";
 import Link from "next/link";
 
 function TeamSlider() {
   return (
-    <>
+    <Container>
       <SwiperComponent
         style={{ margin: "50px 0", padding: "20px 0" }}
         centeredSlides={true}
@@ -67,7 +67,7 @@ function TeamSlider() {
           </OutlineButton>
         </Link>
       </Box>
-    </>
+    </Container>
   );
 }
 

@@ -6,21 +6,18 @@ import { Container, Grid } from "@mui/joy";
 import { blogs, categoryes } from "../data/data";
 import CategoryCard from "../components/category-card/CategoryCard";
 import SectionTitles from "../components/section-titles/SectionTitles";
-import ClientSlider from "../components/client-slider/ClientSlider";
 import ServiceSlider from "../components/service-slider/ServiceSlider";
 import BlogCard from "../components/blog-card/BlogCard";
-import BoardCard from "../components/board-card/BoardCard";
+
 import TeamSlider from "../components/team-slider/TeamSlider";
 import ContactUs from "../components/contact-us/ContactUs";
+import EducationPlatform from "../components/education-platform/EducationPlatform";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <Hero />
-      <Container>
-        <HomeAbout />
-      </Container>
-
+      <HomeAbout />
       <SectionTitles text="خــدمــاتــنــا" />
       <Container>
         <Grid container spacing={2}>
@@ -32,11 +29,7 @@ export default function Home() {
         </Grid>
         <ServiceSlider />
       </Container>
-      {/* <SectionTitles text="شـركـاء الـنـجـاح" />
-      <Container>
-        <ClientSlider />
-      </Container> */}
-
+      <EducationPlatform />
       <SectionTitles text="الـمـدونـة" />
       <Container>
         <Grid container spacing={2}>
@@ -48,10 +41,8 @@ export default function Home() {
         </Grid>
       </Container>
       <SectionTitles text="فريق العمل" />
-      <Container>
-        <TeamSlider />
-        <ContactUs />
-      </Container>
+      <TeamSlider />
+      <ContactUs />
     </main>
   );
 }

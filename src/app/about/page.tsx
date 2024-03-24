@@ -1,12 +1,14 @@
 import BoardCard from "@/src/components/board-card/BoardCard";
+import ServicesAccordion from "@/src/components/service-accordion/ServiceAccordion";
 import IconCard from "@/src/components/icon-card/IconCard";
 import PageHeader from "@/src/components/page-header/PageHeader";
 import SectionTitles from "@/src/components/section-titles/SectionTitles";
 import TowSideLayout from "@/src/components/tow-side-layout/TowSideLayout";
 import { team } from "@/src/data/data";
-import { Button, Container, Grid, Typography } from "@mui/joy";
+import { Box, Button, Container, Grid, Typography } from "@mui/joy";
 import Link from "next/link";
 import React from "react";
+
 const OurValuesData = [
   {
     name: "الـدقـة",
@@ -63,8 +65,10 @@ function page() {
           تـواصـل مـعـانـا
         </Button>
       </TowSideLayout>
-
       <Container sx={{ my: 6 }}>
+        <Box sx={{ mb: 7 }}>
+          <ServicesAccordion />
+        </Box>
         <Grid container spacing={3}>
           {OurValuesData.map((item, idx) => (
             <Grid key={idx} xs={12} sm={6}>
@@ -72,9 +76,8 @@ function page() {
             </Grid>
           ))}
         </Grid>
-      </Container>
-      <SectionTitles text="فـريـق الـعـمـل" />
-      <Container>
+
+        <SectionTitles text="فـريـق الـعـمـل" />
         <Grid container spacing={1}>
           {team.map((item, idx) => (
             <Grid key={item.id} xs={12} sm={6} md={4} lg={3}>

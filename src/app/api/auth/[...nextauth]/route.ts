@@ -6,7 +6,7 @@ import { fetcher } from "@/src/utils/fetcher";
 const LoginUser = async (
   credentials: Record<"email" | "password", string> | undefined
 ) => {
-  const res = await fetcher("api/auth/jwt/login/", {
+  const res = await fetcher("api/auth/login/", {
     method: "post",
     body: JSON.stringify(credentials),
     headers: { "Content-Type": "application/json" },
@@ -14,19 +14,6 @@ const LoginUser = async (
   });
   const data = await res.json();
 
-  return data;
-};
-
-const getUserInfo = async (token: string) => {
-  const res = await fetcher("api/auth/me/", {
-    method: "get",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    credentials: "include",
-  });
-  const data = await res.json();
   return data;
 };
 
@@ -47,14 +34,12 @@ const authOptions: NextAuthOptions = {
         },
       },
       async authorize(credentials): Promise<any> {
-        const token = await LoginUser(credentials);
+        const user = await LoginUser(credentials);
 
-        if (token.hasOwnProperty("access")) {
-          const user = await getUserInfo(token.access);
-
-          return { access_token: token.access, ...user };
+        if (user.hasOwnProperty("access")) {
+          return { access_token: user?.access, ...user.user };
         } else {
-          throw new Error(JSON.stringify({ error: token, status: false }));
+          throw new Error(JSON.stringify({ error: user, status: false }));
         }
       },
     }),

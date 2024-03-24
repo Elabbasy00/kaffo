@@ -9,7 +9,13 @@ import OutlineButton from "../outline-btn/OutlineButton";
 export default function CategoryCard({
   item,
 }: {
-  item: { name: string; description: string; image: string; ref: string };
+  item: {
+    name: string;
+    description: string;
+    image: string;
+    ref: string;
+    url: string;
+  };
 }) {
   return (
     <Card
@@ -72,7 +78,7 @@ export default function CategoryCard({
           margin: "0 auto",
         }}
       >
-        <Link href={`/services/${item.ref}`}>
+        <Link href={item.url}>
           <OutlineButton backgroundColor="var(--joy-palette-primary-solidBg)">
             الـمـزيـد
           </OutlineButton>

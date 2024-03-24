@@ -111,14 +111,14 @@ function Footer() {
                 <FooterInfo>
                   <MdPhone />
                   <Typography level="h4" sx={{ direction: "rtl" }}>
-                    +966 55 262 3843
+                    00201147617485
                   </Typography>
                 </FooterInfo>
-                <FooterInfo>
+                {/* <FooterInfo>
                   <MdLocationPin />
 
                   <Typography level="h4">Saudi Arabia, Madinah </Typography>
-                </FooterInfo>
+                </FooterInfo> */}
               </List>
             </Card>
           </Grid>

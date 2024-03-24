@@ -23,12 +23,12 @@ function IconCard({
       <Image
         src={item.img}
         width={100}
-        height={0}
+        height={120}
         sizes="100vw"
         style={{
           margin: "auto",
           width: "auto",
-          height: "100%",
+          // height: "100%",
           objectFit: "contain",
         }}
         alt=""
