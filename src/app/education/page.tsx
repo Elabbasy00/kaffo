@@ -4,13 +4,13 @@ import StagesCards from "@/src/components/stages-cards/StagesCards";
 
 import React from "react";
 
-const getStages = async () => {
-  const data = await getStagesList();
-  return data;
-};
+// const getStages = async () => {
+//   const data = await getStagesList();
+//   return data;
+// };
 
 async function page() {
-  const data = await getStages();
+  // const data = await getStages();
   return (
     <div>
       <PageHeader
@@ -18,7 +18,7 @@ async function page() {
         title="الـمـنـصـة الـتـعـلـيـمـة"
         subtitle="ابـد رحـلـتـك الاكـاديـمـيـه"
       />
-      <StagesCards items={JSON.parse(JSON.stringify(data))} />
+      {/* <StagesCards items={JSON.parse(JSON.stringify(data))} /> */}
     </div>
   );
 }
