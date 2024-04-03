@@ -17,7 +17,7 @@ function TowSideLayout({ img, reversed, withEffect = false, children }: Props) {
     <Container
       sx={(theme) => ({
         position: "relative",
-        bgcolor: "background.body",
+        bgcolor: "transparent",
         minHeight: "100%",
         display: "flex",
         flexDirection: reversed ? "column-reverse" : "column",

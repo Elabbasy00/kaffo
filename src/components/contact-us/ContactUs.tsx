@@ -4,6 +4,7 @@ import {
   Box,
   Container,
   FormControl,
+  FormHelperText,
   FormLabel,
   Grid,
   IconButton,
@@ -20,6 +21,9 @@ import { IoPhonePortrait, IoLogoWhatsapp } from "react-icons/io5";
 // import { IoLogoWhatsapp } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import OutlineButton from "../outline-btn/OutlineButton";
+import { fetcher } from "@/src/utils/fetcher";
+import toast from "react-hot-toast";
+import { ErrorsType } from "@/src/types/data-type";
 
 const InfoWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -60,7 +64,44 @@ const Label = styled(FormLabel)(({ theme }) => ({
   marginBottom: 8,
 }));
 
+interface ContactUsData {
+  name: string;
+  email: string;
+  phone_number: string;
+  service: string | null;
+}
+
 function ContactUs() {
+  const [data, setData] = React.useState<ContactUsData>({
+    name: "",
+    email: "",
+    phone_number: "",
+    service: "",
+  });
+  const [erros, setErrors] = React.useState<ErrorsType | null>();
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const response = await fetcher("api/users/contact-us/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const resData = await response.json();
+    if (!response.ok) {
+      setErrors(resData);
+      toast.error(resData.message);
+    } else {
+      setErrors(null);
+      toast.success(resData.message);
+      setData({ name: "", email: "", phone_number: "", service: "" });
+    }
+  };
   return (
     <Container>
       <Box
@@ -105,7 +146,7 @@ function ContactUs() {
                 <IconButton
                   variant="outlined"
                   color="primary"
-                  href="tel:+966552623843"
+                  href="tel:201147617485"
                   component="a"
                   target="_blank"
                 >
@@ -114,7 +155,7 @@ function ContactUs() {
                 <IconButton
                   variant="outlined"
                   color="primary"
-                  href="https://api.whatsapp.com/send?phone=966552623843"
+                  href="https://api.whatsapp.com/send?phone=201147617485"
                   component="a"
                   target="_blank"
                 >
@@ -133,44 +174,102 @@ function ContactUs() {
             </InfoWrapper>
           </Grid>
           <Grid xs={12} md={6}>
-            <FormControlWrapper color="neutral" size="lg">
-              <Label>الاسم</Label>
-              <Input variant="soft" placeholder="الاســم" />
-            </FormControlWrapper>
-            <FormControlWrapper color="neutral" size="lg">
-              <Label>البريد الالكتروني</Label>
-              <Input variant="soft" placeholder="الـبـريـد الالـكـتـرونـي" />
-            </FormControlWrapper>
-            <FormControlWrapper color="neutral" size="lg">
-              <Label>رقم الجوال</Label>
-              <Input variant="soft" placeholder="رقـم الـجـوال" />
-            </FormControlWrapper>
-
-            <Label>اختر الخدمة</Label>
-
-            <Select
-              slotProps={{
-                listbox: {
-                  "data-lenis-prevent": true,
-                },
-              }}
-              placeholder="اخـتـر الـخـدمـة"
-              variant="soft"
-              size="lg"
-            >
-              {services.map((item) => (
-                <Option key={item.id} value={item.name}>
-                  {item.name}
-                </Option>
-              ))}
-            </Select>
-            <Box sx={{ my: 2 }}>
-              <OutlineButton
-                backgroundColor="var(--joy-palette-primary-solidBg)"
-                color="primary"
+            <Box component="form" onSubmit={onSubmit}>
+              <FormControlWrapper
+                color="neutral"
+                size="lg"
+                required
+                error={erros?.extra?.fields?.name}
               >
-                ارسـال طـلـبـك
-              </OutlineButton>
+                <Label>الاسم</Label>
+                <Input
+                  variant="soft"
+                  placeholder="الاســم"
+                  name="name"
+                  value={data.name}
+                  onChange={onChange}
+                />
+                <FormHelperText
+                  sx={{ fontWeight: "bold", color: "danger.softBg" }}
+                >
+                  {erros?.extra?.fields?.name}
+                </FormHelperText>
+              </FormControlWrapper>
+              <FormControlWrapper
+                color="neutral"
+                size="lg"
+                required
+                error={erros?.extra?.fields?.email}
+              >
+                <Label>البريد الالكتروني</Label>
+                <Input
+                  variant="soft"
+                  placeholder="الـبـريـد الالـكـتـرونـي"
+                  name="email"
+                  value={data.email}
+                  onChange={onChange}
+                />
+                <FormHelperText
+                  sx={{ fontWeight: "bold", color: "danger.softBg" }}
+                >
+                  {erros?.extra?.fields?.email}
+                </FormHelperText>
+              </FormControlWrapper>
+              <FormControlWrapper
+                color="neutral"
+                size="lg"
+                required
+                error={erros?.extra?.fields?.phone_number}
+              >
+                <Label>رقم الجوال</Label>
+                <Input
+                  variant="soft"
+                  placeholder="رقـم الـجـوال"
+                  name="phone_number"
+                  value={data.phone_number}
+                  onChange={onChange}
+                />
+                <FormHelperText
+                  sx={{ fontWeight: "bold", color: "danger.softBg" }}
+                >
+                  {erros?.extra?.fields?.phone_number}
+                </FormHelperText>
+              </FormControlWrapper>
+
+              <Label>اختر الخدمة</Label>
+
+              <Select
+                required
+                slotProps={{
+                  listbox: {
+                    "data-lenis-prevent": true,
+                  },
+                }}
+                placeholder="اخـتـر الـخـدمـة"
+                variant="soft"
+                size="lg"
+                name="service"
+                value={data.service}
+                onChange={(e, value) =>
+                  // @ts-ignore
+                  onChange({ target: { name: "service", value: value! } })
+                }
+              >
+                {services.map((item) => (
+                  <Option key={item.id} value={item.name}>
+                    {item.name}
+                  </Option>
+                ))}
+              </Select>
+              <Box sx={{ my: 2 }}>
+                <OutlineButton
+                  backgroundColor="var(--joy-palette-primary-solidBg)"
+                  color="primary"
+                  type="submit"
+                >
+                  ارسـال طـلـبـك
+                </OutlineButton>
+              </Box>
             </Box>
           </Grid>
         </Grid>

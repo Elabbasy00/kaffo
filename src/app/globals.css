@@ -68,3 +68,9 @@ html.lenis, html.lenis body {
 .client-slider .swiper-slide-active {
   opacity: 1 !important;
 }
+
+.custom-video {
+  border: none !important;
+  background-color: transparent !important;
+
+}

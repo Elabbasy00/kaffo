@@ -127,7 +127,7 @@ function Hero() {
               البرمجة، والتسويق فنًا، نقدم خدماتنا بروح إيجابية و متميزة لتسهيل
               رحلة النجاح لعملائنا.
             </HeroDescription>
-            <a href="https://wa.me/+966552623843" target="_blank">
+            <a href="https://wa.me/201147617485" target="_blank">
               <OutlineButton
                 endDecorator={<FaWhatsapp style={{ fontSize: "1.6em" }} />}
                 backgroundColor="var(--joy-palette-primary-solidBg)"

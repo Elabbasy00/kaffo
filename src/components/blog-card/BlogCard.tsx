@@ -9,12 +9,10 @@ import Link from "next/link";
 import Typography from "@mui/joy/Typography";
 import { MdArrowOutward } from "react-icons/md";
 import Image from "next/image";
+import { BlogType } from "@/src/types/data-type";
+import { Button } from "@mui/joy";
 
-export default function BlogCard({
-  item,
-}: {
-  item: { name: string; image: string };
-}) {
+export default function BlogCard({ item }: { item: BlogType }) {
   return (
     <Card
       sx={{
@@ -29,7 +27,7 @@ export default function BlogCard({
       <CardOverflow>
         <AspectRatio ratio="1 / 1" sx={{ minWidth: "100%", height: "100%" }}>
           <Image
-            src={item.image}
+            src={item.cover}
             fill
             style={{ objectFit: "cover", width: "100%", height: "100%" }}
             loading="lazy"
@@ -39,10 +37,10 @@ export default function BlogCard({
       </CardOverflow>
       <CardContent>
         <Typography level="body-xs" textColor="primary.solidBg">
-          {new Date().toDateString()}
+          {new Date(item.created_at).toDateString()}
         </Typography>
         <MuiLink
-          href="/"
+          href={`/blog/${item.slug}`}
           fontWeight="lg"
           color="neutral"
           textColor="text.primary"
@@ -51,14 +49,9 @@ export default function BlogCard({
           overlay
           startDecorator={<MdArrowOutward />}
         >
-          <Typography noWrap>{item.name}</Typography>
+          <Typography noWrap>{item.overview}</Typography>
         </MuiLink>
       </CardContent>
-      {/* <CardOverflow>
-        <Button variant="solid" color="primary" size="lg">
-          قـراءة الـزيد
-        </Button>
-      </CardOverflow> */}
     </Card>
   );
 }

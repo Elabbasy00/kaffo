@@ -5,6 +5,7 @@ import Navbar from "../components/navbar/Navbar";
 import ThemeRegistry from "../ThemeRegistry/ThemeRegistry";
 import Footer from "../components/footer/Footer";
 import SessionWrapper from "./SessionWrapper";
+import { Toaster } from "react-hot-toast";
 
 const cairo = Cairo({ subsets: ["arabic"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={cairo.className}>
         <SessionWrapper>
           <ThemeRegistry>
+            <Toaster position="top-center" />
             <Navbar />
             {children}
             <Footer />

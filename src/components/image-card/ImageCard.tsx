@@ -4,12 +4,12 @@ import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import Typography from "@mui/joy/Typography";
 import Image from "next/image";
-import { StageType } from "@/src/types/data-type";
+import { EducationType } from "@/src/types/data-type";
 import MuiLink from "@mui/joy/Link";
 import Link from "next/link";
 import { Box } from "@mui/joy";
 
-export default function ImageCard({ item }: { item: StageType }) {
+export default function ImageCard({ item }: { item: EducationType }) {
   return (
     <Card
       component="li"
@@ -67,7 +67,8 @@ export default function ImageCard({ item }: { item: StageType }) {
           width: "100%",
           height: "100%",
           borderRadius: "10px",
-          background: "linear-gradient(180deg, #faaf40e6, #0e6b81d6)",
+          background:
+            "linear-gradient(to top, var(--joy-palette-neutral-solidBg), rgba(0,0,0,0) 200px)",
         }}
       />
     </Card>

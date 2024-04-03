@@ -111,7 +111,7 @@ function Footer() {
                 <FooterInfo>
                   <MdPhone />
                   <Typography level="h4" sx={{ direction: "rtl" }}>
-                    00201147617485
+                    201147617485
                   </Typography>
                 </FooterInfo>
                 {/* <FooterInfo>

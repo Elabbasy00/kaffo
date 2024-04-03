@@ -11,7 +11,7 @@ import { CgProfile } from "react-icons/cg";
 
 export default function UserAvatar() {
   const { data, status } = useSession();
-  console.log(data);
+
   return (
     <>
       {status === "loading" ? (

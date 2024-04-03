@@ -12,6 +12,7 @@ import BlogCard from "../components/blog-card/BlogCard";
 import TeamSlider from "../components/team-slider/TeamSlider";
 import ContactUs from "../components/contact-us/ContactUs";
 import EducationPlatform from "../components/education-platform/EducationPlatform";
+import BlogsSection from "../components/blogs-section/BlogsSection";
 
 export default function Home() {
   return (
@@ -30,16 +31,7 @@ export default function Home() {
         <ServiceSlider />
       </Container>
       <EducationPlatform />
-      <SectionTitles text="الـمـدونـة" />
-      <Container>
-        <Grid container spacing={2}>
-          {blogs.map((item, id) => (
-            <Grid key={id} xs={12} sm={6} md={3}>
-              <BlogCard item={item} />
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+      <BlogsSection offest={0} limit={4} />
       <SectionTitles text="فريق العمل" />
       <TeamSlider />
       <ContactUs />

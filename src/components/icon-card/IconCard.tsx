@@ -43,7 +43,16 @@ function IconCard({
         >
           {item.name}
         </Typography>
-        <Typography level="body-md" textColor="neutral.500" mb={1}>
+        <Typography
+          level="body-md"
+          textColor="neutral.500"
+          sx={
+            {
+              // whiteSpace: "pre-line",
+            }
+          }
+          mb={1}
+        >
           {item?.desc}
         </Typography>
       </CardContent>
