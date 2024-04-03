@@ -5,13 +5,13 @@ import { Divider, Typography } from "@mui/joy";
 
 import React from "react";
 
-const getStages = async () => {
-  const data = await getAvailableEducationList();
-  return data;
-};
+// const getStages = async () => {
+//   const data = await getAvailableEducationList();
+//   return data;
+// };
 
 async function page() {
-  const data = await getStages();
+  // const data = await getStages();
   return (
     <div>
       <PageHeader
@@ -28,8 +28,8 @@ async function page() {
           اخـتـار مـسـارك الاكـاديـمي
         </Typography>
       </Divider>
-
-      <StagesCards items={JSON.parse(JSON.stringify(data))} />
+      {/* 
+      <StagesCards items={JSON.parse(JSON.stringify(data))} /> */}
     </div>
   );
 }

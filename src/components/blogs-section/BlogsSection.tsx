@@ -7,10 +7,10 @@ import OutlineButton from "../outline-btn/OutlineButton";
 import Link from "next/link";
 import { getBlogList } from "@/src/actions/actions";
 
-const getBlogs = async (limit: number, offest: number) => {
-  const data = await getBlogList(limit, offest);
-  return data;
-};
+// const getBlogs = async (limit: number, offest: number) => {
+//   const data = await getBlogList(limit, offest);
+//   return data;
+// };
 
 async function BlogsSection({
   limit,
@@ -19,13 +19,13 @@ async function BlogsSection({
   limit: number;
   offest: number;
 }) {
-  const blogs = await getBlogs(limit, offest);
+  // const blogs = await getBlogs(limit, offest);
   return (
     <>
       <SectionTitles text="الـمـدونـة" />
       <Container>
         <Grid container spacing={2}>
-          {blogs?.results?.map((item, id) => (
+          {blogs?.map((item, id) => (
             <Grid key={id} xs={12} sm={6} md={3}>
               <BlogCard item={item} />
             </Grid>

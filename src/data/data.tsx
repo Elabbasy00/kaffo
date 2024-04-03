@@ -1,3 +1,5 @@
+import { BlogType } from "../types/data-type";
+
 export const categoryes = [
   {
     ref: "market",
@@ -133,34 +135,38 @@ export const client = [
   },
 ];
 
-export const blogs = [
+export const blogs: BlogType[] = [
   {
-    name: "كيفية تدير مبيعاتك بشكل احترافي",
-    timestamp: "",
+    overview: "كيفية تدير مبيعاتك بشكل احترافي",
     content: "",
-    image: "/blog/sales.png",
-    id: 1,
+    cover: "/blog/sales.png",
+    id: "1",
+    created_at: new Date().toLocaleDateString(),
+    slug: "",
   },
   {
-    name: "الاهداف التسويقة",
-    timestamp: "",
+    overview: "الاهداف التسويقة",
     content: "",
-    image: "/blog/goals.jpg",
-    id: 2,
+    cover: "/blog/goals.jpg",
+    id: "2",
+    created_at: new Date().toLocaleDateString(),
+    slug: "",
   },
   {
-    name: "كيف تصمم هوية بصرية",
-    timestamp: "",
+    overview: "كيف تصمم هوية بصرية",
+    created_at: new Date().toLocaleDateString(),
     content: "",
-    image: "/blog/desgin.webp",
-    id: 3,
+    cover: "/blog/desgin.webp",
+    id: "3",
+    slug: "",
   },
   {
-    name: "ما هو Flutter",
-    timestamp: "",
+    overview: "ما هو Flutter",
+    created_at: new Date().toLocaleDateString(),
     content: "",
-    image: "/blog/flutter-1.png",
-    id: 4,
+    cover: "/blog/flutter-1.png",
+    id: "4",
+    slug: "",
   },
 ];
 
