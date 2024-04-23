@@ -21,6 +21,7 @@ export async function getEducationStages(slug: string) {
     `api/education/stages/?slug=${slug}`,
     {
       method: "get",
+      next: { revalidate: 600 },
     }
   );
 
@@ -43,6 +44,7 @@ export async function getGradeCourses(grade: string) {
     `api/education/grade-courses/?grade_level=${grade}`,
     {
       method: "get",
+      next: { revalidate: 600 },
     }
   );
 
@@ -54,6 +56,7 @@ export async function getSingleCourse(slug: string) {
     `api/education/single-course/?slug=${slug}`,
     {
       method: "get",
+      next: { revalidate: 600 },
     }
   );
 
@@ -68,6 +71,7 @@ export async function getBlogList(
     `api/blog/list/?limit=${limit}&offset=${offset}`,
     {
       method: "get",
+      next: { revalidate: 600 },
     }
   );
 
@@ -77,6 +81,7 @@ export async function getBlogList(
 export async function getSingleBlog(slug: string) {
   const data = await api<BlogType>(`api/blog/single-post/?slug=${slug}`, {
     method: "get",
+    next: { revalidate: 600 },
   });
 
   return data;
