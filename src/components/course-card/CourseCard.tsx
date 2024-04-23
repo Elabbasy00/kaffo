@@ -56,8 +56,14 @@ export default function CourseCard({ item }: { item: CoursesType }) {
         </Typography>
       </CardContent>
       <CardOverflow>
-        <Button variant="solid" color="primary" size="lg">
-          Enroll
+        <Button
+          variant="solid"
+          color="primary"
+          size="lg"
+          component={Link}
+          href="/contact"
+        >
+          انـضـم الـيـنـا
         </Button>
       </CardOverflow>
     </Card>

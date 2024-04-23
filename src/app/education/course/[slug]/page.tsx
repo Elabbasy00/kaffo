@@ -5,23 +5,23 @@ import { Box, Container, Sheet, Typography } from "@mui/joy";
 
 import React from "react";
 
-// async function getCourse(slug: string) {
-//   const course = await getSingleCourse(slug);
-//   return course;
-// }
+async function getCourse(slug: string) {
+  const course = await getSingleCourse(slug);
+  return course;
+}
 
 async function page({ params }: { params: { slug: string } }) {
-  // const course = await getCourse(params.slug);
+  const course = await getCourse(params.slug);
   return (
     <Box sx={{ py: 2, display: "flex", flexDirection: "column", gap: 3 }}>
-      {/* <CourseDetail course={course} /> */}
+      <CourseDetail course={course} />
       <Container>
         <Typography level="h4" sx={{ my: 4 }} textColor="text.icon">
           الـفـديـوهـات
         </Typography>
-        {/* <Sheet variant="outlined">
+        <Sheet variant="outlined">
           <VideosAccordion videos={course.course_videos} />
-        </Sheet> */}
+        </Sheet>
       </Container>
     </Box>
   );

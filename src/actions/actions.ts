@@ -60,7 +60,10 @@ export async function getSingleCourse(slug: string) {
   return data;
 }
 
-export async function getBlogList(limit: number = 10, offset: number = 0) {
+export async function getBlogList(
+  limit: number = 10,
+  offset: number = 0
+): Promise<BlogsType> {
   const data = await api<BlogsType>(
     `api/blog/list/?limit=${limit}&offset=${offset}`,
     {

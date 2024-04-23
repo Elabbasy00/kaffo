@@ -4,8 +4,8 @@ const nextConfig = {
     // hostnames: ["images.unsplash.com"],
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "127.0.0.1",
+        protocol: "https",
+        hostname: "backend.kaffo.co",
       },
     ],
   },

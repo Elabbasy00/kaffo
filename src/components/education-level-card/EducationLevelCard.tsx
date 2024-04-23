@@ -44,18 +44,20 @@ function EducationLevelCard({ item }: { item: EducationStageType }) {
         <AccordionSummary indicator={null}>
           <Card variant="outlined" sx={{ width: "100%" }}>
             <CardOverflow>
-              <AspectRatio ratio="2">
-                <Image
-                  src={item.image}
-                  loading="lazy"
-                  alt=""
-                  width={500}
-                  height={500}
-                />
-              </AspectRatio>
+              {item?.image && (
+                <AspectRatio ratio="2">
+                  <Image
+                    src={item?.image}
+                    loading="lazy"
+                    alt=""
+                    width={500}
+                    height={500}
+                  />
+                </AspectRatio>
+              )}
             </CardOverflow>
             <CardContent>
-              <Typography level="title-md">{item.name}</Typography>
+              <Typography level="title-md">{item?.name}</Typography>
             </CardContent>
             <CardOverflow>
               <Divider inset="context" />
@@ -68,7 +70,7 @@ function EducationLevelCard({ item }: { item: EducationStageType }) {
                 }}
               >
                 <Typography level="body-md" textColor="text.icon">
-                  {item.grade_levels?.length} مستوي
+                  {item?.grade_levels?.length} مستوي
                 </Typography>
                 <MdArrowDownward />
               </CardContent>
@@ -76,13 +78,13 @@ function EducationLevelCard({ item }: { item: EducationStageType }) {
           </Card>
         </AccordionSummary>
         <AccordionDetails>
-          {item.grade_levels?.map((item) => (
+          {item?.grade_levels?.map((item) => (
             <React.Fragment key={item.id}>
               <ListItem
                 component={Link}
-                href={`/education/topic/${item.slug}/`}
+                href={`/education/topic/${item?.slug}/`}
               >
-                <ListItemButton>{item.name}</ListItemButton>
+                <ListItemButton>{item?.name}</ListItemButton>
               </ListItem>
               <Divider />
             </React.Fragment>

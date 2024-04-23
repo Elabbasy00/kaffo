@@ -4,12 +4,12 @@ import Courses from "@/src/components/courses/Courses";
 import { Container, Divider, Typography } from "@mui/joy";
 import React from "react";
 
-// async function getCourses(grade: string) {
-//   const courses = await getGradeCourses((grade = grade));
-//   return courses;
-// }
+async function getCourses(grade: string) {
+  const courses = await getGradeCourses((grade = grade));
+  return courses;
+}
 async function page({ params }: { params: { grade: string } }) {
-  // const courses = await getCourses(params.grade);
+  const courses = await getCourses(params.grade);
 
   return (
     <Container>
@@ -17,7 +17,7 @@ async function page({ params }: { params: { grade: string } }) {
         كـورسات {decodeURIComponent(params.grade.replaceAll("-", " "))}
       </Typography>
       <Divider sx={{ my: 2 }} />
-      {/* <Courses items={JSON.parse(JSON.stringify(courses))} /> */}
+      <Courses items={JSON.parse(JSON.stringify(courses))} />
     </Container>
   );
 }

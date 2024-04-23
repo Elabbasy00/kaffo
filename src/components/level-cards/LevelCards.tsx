@@ -4,7 +4,6 @@ import React from "react";
 import EducationLevelCard from "../education-level-card/EducationLevelCard";
 
 function LevelCards({ levels }: { levels: EducationStageType[] }) {
-  console.log(levels);
   return (
     <Grid container spacing={3}>
       {levels.map((item) => (

@@ -9,8 +9,7 @@ const getStages = async (stage: string) => {
 };
 // decodeURIComponent
 async function page({ params }: { params: { stage: any } }) {
-  // const levels = await getStages(params.stage);
-  const levels = [{}];
+  const levels = await getStages(params.stage);
 
   return (
     <Container>

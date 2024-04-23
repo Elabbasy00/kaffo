@@ -22,7 +22,7 @@ function CourseDetail({ course }: { course: CoursesType }) {
           {course.desc}
         </Typography>
         <Button component={Link} href="/contact" size="lg">
-          Enroll
+          انـضـم الـيـنـا
         </Button>
       </TowSideLayout>
     </Sheet>
