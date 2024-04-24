@@ -78,7 +78,7 @@ function Navbar() {
             sx={{
               display: { md: "flex", xs: "none" },
               flexDirection: "row",
-              gap: 6,
+              gap: 3,
               alignItems: "center",
               justifyContent: "center",
               // flexGrow: 1,
@@ -88,6 +88,7 @@ function Navbar() {
             <ActiveLink href="/about" name="من نحن" />
             <ActiveLink href="/services" name="خدماتنا" />
             <ActiveLink href="/contact" name="اتصل بنا" />
+            <ActiveLink href="/education" name="المنصة التعليمية" />
 
             <UserAvatar />
           </Box>
@@ -128,8 +129,11 @@ function Navbar() {
                   <MenuItem component={Link} href="/services">
                     خـدمـاتـنـا
                   </MenuItem>
-                  <MenuItem component={Link} href="/contact-us">
+                  <MenuItem component={Link} href="/contact">
                     اتـصـل بـنـا
+                  </MenuItem>
+                  <MenuItem component={Link} href="/contact">
+                    المنصة التعليمية
                   </MenuItem>
                 </Menu>
               </Dropdown>

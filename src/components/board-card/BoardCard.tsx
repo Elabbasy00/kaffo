@@ -35,7 +35,9 @@ export default function BoardCard({
           height={100}
           src={item.img}
           alt=""
+          sizes="100vw"
           quality={100}
+          priority
           style={{
             width: "100%",
             height: "350px",
