@@ -3,9 +3,17 @@ import ServiceCard from "@/src/components/service-card/ServiceCard";
 
 import { Grid } from "@mui/joy";
 import React from "react";
+const allServices = async () => {
+  try {
+    const services = await getServices();
+    return services;
+  } catch {
+    return [];
+  }
+};
 
 async function page({ params }: { params: { slug: string } }) {
-  const services = await getServices();
+  const services = await allServices();
   return (
     <Grid container spacing={2}>
       {services
