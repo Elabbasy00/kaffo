@@ -74,3 +74,10 @@ html.lenis, html.lenis body {
   background-color: transparent !important;
 
 }
+
+
+@media screen and (max-width: 576px) {
+  .swiper-button-prev, .swiper-button-next {
+    display:  none !important;
+  }
+}

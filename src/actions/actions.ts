@@ -5,6 +5,8 @@ import {
   EducationLevelType,
   EducationStageType,
   EducationType,
+  ServicesProjectsType,
+  ServicesType,
 } from "../types/data-type";
 import { api } from "../utils/fetcher";
 
@@ -83,6 +85,27 @@ export async function getSingleBlog(slug: string) {
     method: "get",
     next: { revalidate: 600 },
   });
+
+  return data;
+}
+
+export async function getServices() {
+  const data = await api<ServicesType[]>(`/api/services/`, {
+    method: "get",
+    next: { revalidate: 300 },
+  });
+
+  return data;
+}
+
+export async function getServicesProjects(slug: string) {
+  const data = await api<ServicesProjectsType[]>(
+    `api/services/service-detail/?slug=${slug}`,
+    {
+      method: "get",
+      next: { revalidate: 600 },
+    }
+  );
 
   return data;
 }

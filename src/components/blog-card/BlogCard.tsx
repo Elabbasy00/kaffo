@@ -26,13 +26,7 @@ export default function BlogCard({ item }: { item: BlogType }) {
     >
       <CardOverflow>
         <AspectRatio ratio="1 / 1" sx={{ minWidth: "100%", height: "100%" }}>
-          <Image
-            src={item.cover}
-            fill
-            style={{ objectFit: "cover", width: "100%", height: "100%" }}
-            loading="lazy"
-            alt=""
-          />
+          <Image src={item.cover} fill loading="lazy" alt={item.overview} />
         </AspectRatio>
       </CardOverflow>
       <CardContent>

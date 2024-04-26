@@ -4,10 +4,11 @@ import SwiperComponent from "../swiper/SwiperComponent";
 import { SwiperSlide } from "swiper/react";
 import { Box } from "@mui/joy";
 import ServiceCard from "../service-card/ServiceCard";
-import { services } from "@/src/data/data";
-import { Autoplay } from "swiper/modules";
 
-function ServiceSlider() {
+import { Autoplay } from "swiper/modules";
+import { ServicesType } from "@/src/types/data-type";
+
+function ServiceSlider({ services = [] }: { services: ServicesType[] }) {
   return (
     <Box
       sx={{

@@ -1,20 +1,18 @@
 import styles from "./page.module.css";
 import Hero from "../components/hero/Hero";
-
 import HomeAbout from "../components/home-about/HomeAbout";
 import { Container, Grid } from "@mui/joy";
-import { blogs, categoryes } from "../data/data";
+import { categoryes } from "../data/data";
 import CategoryCard from "../components/category-card/CategoryCard";
 import SectionTitles from "../components/section-titles/SectionTitles";
 import ServiceSlider from "../components/service-slider/ServiceSlider";
-import BlogCard from "../components/blog-card/BlogCard";
-
 import TeamSlider from "../components/team-slider/TeamSlider";
 import ContactUs from "../components/contact-us/ContactUs";
 import EducationPlatform from "../components/education-platform/EducationPlatform";
 import BlogsSection from "../components/blogs-section/BlogsSection";
+import ServiceSection from "../components/service-slider/ServiceSection";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className={styles.main}>
       <Hero />
@@ -28,7 +26,7 @@ export default function Home() {
             </Grid>
           ))}
         </Grid>
-        <ServiceSlider />
+        <ServiceSection />
       </Container>
       <EducationPlatform />
       <BlogsSection offest={0} limit={4} />

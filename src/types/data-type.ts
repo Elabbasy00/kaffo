@@ -70,3 +70,23 @@ export interface ErrorsType {
   };
   message: string;
 }
+
+export interface ServicesType {
+  id: string;
+  title: string;
+  cover: string;
+  slug: string;
+  parent: string;
+}
+
+export interface ProjectGalleryType {
+  img: string;
+}
+export interface ServicesProjectsType {
+  id: string;
+  title: string;
+  cover: string;
+  slug: string;
+  overview: string;
+  gallery: ProjectGalleryType[];
+}

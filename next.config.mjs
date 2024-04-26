@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "backend.kaffo.co",
       },
+      {
+        protocol: "http",
+        hostname: "127.0.0.1",
+      },
     ],
   },
 };
