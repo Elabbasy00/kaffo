@@ -4,8 +4,12 @@ import { Container, Divider, Typography } from "@mui/joy";
 import React from "react";
 
 const getStages = async (stage: string) => {
-  const data = await getEducationStages(stage);
-  return data;
+  try {
+    const data = await getEducationStages(stage);
+    return data;
+  } catch {
+    return null;
+  }
 };
 // decodeURIComponent
 async function page({ params }: { params: { stage: any } }) {

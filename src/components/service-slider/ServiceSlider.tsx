@@ -53,7 +53,7 @@ function ServiceSlider({ services = [] }: { services: ServicesType[] }) {
           },
         }}
       >
-        {services.map((item) => (
+        {services?.map((item) => (
           <SwiperSlide key={item.id}>
             <ServiceCard item={item} />
           </SwiperSlide>

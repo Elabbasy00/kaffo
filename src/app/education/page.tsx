@@ -6,8 +6,12 @@ import { Divider, Typography } from "@mui/joy";
 import React from "react";
 
 const getStages = async () => {
-  const data = await getAvailableEducationList();
-  return data;
+  try {
+    const data = await getAvailableEducationList();
+    return data;
+  } catch {
+    return null;
+  }
 };
 
 export default async function page() {
