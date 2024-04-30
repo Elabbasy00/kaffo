@@ -90,7 +90,7 @@ export async function getSingleBlog(slug: string) {
 }
 
 export async function getServices() {
-  const data = await api<ServicesType[]>(`/api/services/`, {
+  const data = await api<ServicesType[]>(`api/services/`, {
     method: "get",
     next: { revalidate: 300 },
   });

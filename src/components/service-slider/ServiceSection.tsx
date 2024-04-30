@@ -6,7 +6,8 @@ const allServices = async () => {
   try {
     const services = await getServices();
     return services;
-  } catch {
+  } catch (e) {
+    console.log(e);
     return [];
   }
 };
