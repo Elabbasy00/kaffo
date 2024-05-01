@@ -8,7 +8,8 @@ function EducationPlatform() {
       sx={{
         background: "url(/educ.jpg)",
         width: "100%",
-        height: "500px",
+        height: "100%",
+        py: 5,
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         backgroundSize: "cover",

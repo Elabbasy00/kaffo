@@ -1,4 +1,4 @@
-import { Box, Divider, Typography } from "@mui/joy";
+import { Box, Typography } from "@mui/joy";
 import React from "react";
 import TextSlideAnimation from "../text-slide-animation/TextSlideAnimation";
 import Image from "next/image";
@@ -29,7 +29,9 @@ function SectionTitles({ text }: { text: string }) {
           height={2}
           src="/divider-right.png"
           alt="divider"
+          quality={100}
           loading="lazy"
+          sizes="100vw"
           style={{
             width: "100%",
             height: "100%",
@@ -62,6 +64,8 @@ function SectionTitles({ text }: { text: string }) {
           width={100}
           height={100}
           loading="lazy"
+          quality={100}
+          sizes="100vw"
           src="/divider-left.png"
           alt="divider"
         />

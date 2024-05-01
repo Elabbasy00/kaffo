@@ -19,7 +19,14 @@ async function page({ params }: { params: { slug: string } }) {
       {post && (
         <>
           <PageHeader background={post?.cover} title={post?.overview} />
-          <Container sx={{ my: 2 }}>
+          <Container
+            maxWidth="lg"
+            sx={{
+              my: 2,
+              fontFamily: "var(--font-cairo) !important",
+              ul: { lineHeight: "50px" },
+            }}
+          >
             <div dangerouslySetInnerHTML={{ __html: post?.content }} />
           </Container>
         </>
