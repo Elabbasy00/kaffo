@@ -153,7 +153,7 @@ function Hero() {
                 alignItems: "end",
                 width: "100%",
                 height: "100%",
-                background: "url(./hero.svg)",
+                background: "url(./hero.webp)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "bottom",
                 backgroundSize: "contain",
