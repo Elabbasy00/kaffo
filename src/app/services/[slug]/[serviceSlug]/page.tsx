@@ -1,5 +1,7 @@
 import { getServicesProjects } from "@/src/actions/actions";
+import PageHeader from "@/src/components/page-header/PageHeader";
 import ProjectView from "@/src/components/project-view/ProjectView";
+import { Container } from "@mui/joy";
 
 import React from "react";
 
@@ -15,8 +17,15 @@ const serviceProjects = async (slug: string) => {
 async function page({ params }: { params: { serviceSlug: string } }) {
   const slug = params?.serviceSlug;
   const projects = await serviceProjects(slug);
-
-  return <ProjectView projects={projects} />;
+  const title = slug.replaceAll("-", " ");
+  return (
+    <div>
+      <PageHeader background="/pages-headers/services.jpg" title={title} />
+      <Container sx={{ my: 5 }}>
+        <ProjectView projects={projects} />;
+      </Container>
+    </div>
+  );
 }
 
 export default page;
