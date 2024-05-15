@@ -15,7 +15,7 @@ const serviceProjects = async (slug: string) => {
 };
 
 async function page({ params }: { params: { serviceSlug: string } }) {
-  const slug = params?.serviceSlug;
+  const slug = decodeURIComponent(params?.serviceSlug);
   const projects = await serviceProjects(slug);
   const title = slug.replaceAll("-", " ");
   // dad;
