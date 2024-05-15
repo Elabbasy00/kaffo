@@ -24,10 +24,11 @@ function ImageGallery({
       customOpen={customOpen}
       customSetOpen={customSetOpen}
     >
-      <Container>
-        <Box sx={{ width: "100%", height: "100%", paddingY: 2 }}>
-          <ImageGallerySlider project={obj} />
-        </Box>
+      <Container
+        maxWidth="md"
+        sx={{ width: "100%", height: "100%", paddingY: 2 }}
+      >
+        <ImageGallerySlider project={obj} />
       </Container>
     </CustomModel>
   );

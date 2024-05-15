@@ -52,12 +52,13 @@ function ImageGallerySlider({
             <Image
               unoptimized
               src={project.cover}
-              width={20}
-              height={20}
+              width={200}
+              height={200}
+              sizes="100vw"
+              quality={100}
               style={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
               }}
               alt={project.title}
             />
@@ -69,11 +70,12 @@ function ImageGallerySlider({
               src={item.img}
               width={20}
               height={20}
+              sizes="100vw"
+              quality={100}
               unoptimized
               style={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
               }}
               alt={project.title}
             />
@@ -95,6 +97,7 @@ function ImageGallerySlider({
               src={project.cover}
               width={20}
               height={20}
+              quality={100}
               unoptimized
               style={{
                 width: "100%",
@@ -110,6 +113,7 @@ function ImageGallerySlider({
             <Image
               src={item.img}
               width={20}
+              quality={100}
               height={20}
               unoptimized
               style={{
