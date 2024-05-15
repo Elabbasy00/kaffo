@@ -18,7 +18,7 @@ async function page({ params }: { params: { serviceSlug: string } }) {
   const slug = decodeURIComponent(params?.serviceSlug);
   const projects = await serviceProjects(slug);
   const title = slug.replaceAll("-", " ");
-  // dad;
+
   return (
     <div>
       <PageHeader background="/pages-headers/services.jpg" title={title} />
