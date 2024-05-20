@@ -64,7 +64,7 @@ function ImageGallerySlider({
           "--swiper-pagination-color": "#fff",
         }}
       >
-        {project && (
+        {/* {project && (
           <SwiperSlide>
             {project?.cover && (
               <PrevivewImage
@@ -78,7 +78,7 @@ function ImageGallerySlider({
               />
             )}
           </SwiperSlide>
-        )}
+        )} */}
         {project?.gallery.map((item) => (
           <SwiperSlide key={item?.img}>
             <PrevivewImage
@@ -102,7 +102,7 @@ function ImageGallerySlider({
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
       >
-        {project && (
+        {/* {project && (
           <SwiperSlide>
             {project?.cover && (
               <ThumbsImage
@@ -115,7 +115,7 @@ function ImageGallerySlider({
               />
             )}
           </SwiperSlide>
-        )}
+        )} */}
         {project?.gallery.map((item) => (
           <SwiperSlide key={item?.img}>
             <ThumbsImage
