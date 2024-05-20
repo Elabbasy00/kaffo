@@ -29,7 +29,9 @@ export default function ProjectCard({
       <Box sx={{ position: "relative" }}>
         <AspectRatio ratio="4/3">
           <figure>
-            <Image src={item?.cover} loading="lazy" fill alt="" />
+            {item?.cover && (
+              <Image src={item?.cover} loading="lazy" fill alt="" />
+            )}
           </figure>
         </AspectRatio>
         <CardCover

@@ -49,19 +49,21 @@ function ImageGallerySlider({
       >
         {project && (
           <SwiperSlide>
-            <Image
-              unoptimized
-              src={project?.cover}
-              width={200}
-              height={200}
-              sizes="100vw"
-              quality={100}
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-              alt={project.title}
-            />
+            {project?.cover && (
+              <Image
+                unoptimized
+                src={project?.cover}
+                width={200}
+                height={200}
+                sizes="100vw"
+                quality={100}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                alt={project.title}
+              />
+            )}
           </SwiperSlide>
         )}
         {project?.gallery.map((item) => (
@@ -93,19 +95,21 @@ function ImageGallerySlider({
       >
         {project && (
           <SwiperSlide>
-            <Image
-              src={project?.cover}
-              width={20}
-              height={20}
-              quality={100}
-              unoptimized
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-              alt={project.title}
-            />
+            {project?.cover && (
+              <Image
+                src={project?.cover}
+                width={20}
+                height={20}
+                quality={100}
+                unoptimized
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+                alt={project.title}
+              />
+            )}
           </SwiperSlide>
         )}
         {project?.gallery.map((item) => (
