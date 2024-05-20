@@ -8,8 +8,25 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import { Box } from "@mui/joy";
+import { Box, styled } from "@mui/joy";
 
+const PrevivewImage = styled(Image)(({ theme }) => ({
+  width: "100%",
+  height: "100%",
+  maxHeight: "500px",
+  objectFit: "contain",
+
+  [theme.breakpoints.down("sm")]: {
+    objectFit: "cover",
+  },
+}));
+
+const ThumbsImage = styled(Image)(({ theme }) => ({
+  width: "100%",
+  height: "100%",
+  maxHeight: "110px",
+  objectFit: "contain",
+}));
 function ImageGallerySlider({
   project,
 }: {
@@ -50,17 +67,13 @@ function ImageGallerySlider({
         {project && (
           <SwiperSlide>
             {project?.cover && (
-              <Image
+              <PrevivewImage
                 unoptimized
                 src={project?.cover}
                 width={200}
                 height={200}
                 sizes="100vw"
                 quality={100}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                }}
                 alt={project.title}
               />
             )}
@@ -68,17 +81,13 @@ function ImageGallerySlider({
         )}
         {project?.gallery.map((item) => (
           <SwiperSlide key={item?.img}>
-            <Image
+            <PrevivewImage
               src={item?.img}
               width={20}
               height={20}
               sizes="100vw"
               quality={100}
               unoptimized
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
               alt={project.title}
             />
           </SwiperSlide>
@@ -96,17 +105,12 @@ function ImageGallerySlider({
         {project && (
           <SwiperSlide>
             {project?.cover && (
-              <Image
+              <ThumbsImage
                 src={project?.cover}
                 width={20}
                 height={20}
                 quality={100}
                 unoptimized
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
                 alt={project.title}
               />
             )}
@@ -114,17 +118,12 @@ function ImageGallerySlider({
         )}
         {project?.gallery.map((item) => (
           <SwiperSlide key={item?.img}>
-            <Image
+            <ThumbsImage
               src={item?.img}
               width={20}
               quality={100}
               height={20}
               unoptimized
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
               alt={project.title}
             />
           </SwiperSlide>
