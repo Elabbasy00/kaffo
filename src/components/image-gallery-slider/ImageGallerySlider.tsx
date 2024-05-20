@@ -51,7 +51,7 @@ function ImageGallerySlider({
           <SwiperSlide>
             <Image
               unoptimized
-              src={project.cover}
+              src={project?.cover}
               width={200}
               height={200}
               sizes="100vw"
@@ -65,9 +65,9 @@ function ImageGallerySlider({
           </SwiperSlide>
         )}
         {project?.gallery.map((item) => (
-          <SwiperSlide key={item.img}>
+          <SwiperSlide key={item?.img}>
             <Image
-              src={item.img}
+              src={item?.img}
               width={20}
               height={20}
               sizes="100vw"
@@ -94,7 +94,7 @@ function ImageGallerySlider({
         {project && (
           <SwiperSlide>
             <Image
-              src={project.cover}
+              src={project?.cover}
               width={20}
               height={20}
               quality={100}
@@ -109,9 +109,9 @@ function ImageGallerySlider({
           </SwiperSlide>
         )}
         {project?.gallery.map((item) => (
-          <SwiperSlide key={item.img}>
+          <SwiperSlide key={item?.img}>
             <Image
-              src={item.img}
+              src={item?.img}
               width={20}
               quality={100}
               height={20}
