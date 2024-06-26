@@ -23,7 +23,7 @@ async function page({ params }: { params: { serviceSlug: string } }) {
     <div>
       <PageHeader background="/pages-headers/services.jpg" title={title} />
       <Container sx={{ my: 5 }}>
-        <ProjectView projects={projects} />;
+        <ProjectView projects={projects} />
       </Container>
     </div>
   );
