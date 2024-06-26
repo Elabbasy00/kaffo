@@ -88,7 +88,7 @@ function Navbar() {
             <ActiveLink href="/about" name="من نحن" />
             <ActiveLink href="/services" name="خدماتنا" />
             <ActiveLink href="/contact" name="اتصل بنا" />
-            <ActiveLink href="/education" name="المنصة التعليمية" />
+            {/* <ActiveLink href="/education" name="المنصة التعليمية" /> */}
 
             <UserAvatar />
           </Box>
@@ -123,7 +123,7 @@ function Navbar() {
                   <MenuItem component={Link} href="/">
                     الـرئـيـسـيـة
                   </MenuItem>
-                  <MenuItem component={Link} href="/about-us">
+                  <MenuItem component={Link} href="/about">
                     مـن نـحـن
                   </MenuItem>
                   <MenuItem component={Link} href="/services">
@@ -132,9 +132,9 @@ function Navbar() {
                   <MenuItem component={Link} href="/contact">
                     اتـصـل بـنـا
                   </MenuItem>
-                  <MenuItem component={Link} href="/contact">
+                  {/* <MenuItem component={Link} href="/contact">
                     المنصة التعليمية
-                  </MenuItem>
+                  </MenuItem> */}
                 </Menu>
               </Dropdown>
             </Box>
